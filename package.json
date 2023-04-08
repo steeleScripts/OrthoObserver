@@ -4,7 +4,9 @@
   "description": "An app to help users observe Orthodox Christian holidays and events",
   "main": "index.js",
   "scripts": {
-    "start": "node server",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server.js",
+    "client": "node start-client.js",
     "dev": "nodemon server"
   },
   "author": "Andrew Steele",
@@ -20,6 +22,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "concurrently": "^8.0.1",
     "nodemon": "^2.0.22"
   }
 }
