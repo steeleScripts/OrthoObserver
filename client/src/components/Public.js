@@ -1,15 +1,13 @@
 import React from 'react'
+import Header from './PublicHeader'
 
 const Public = () => {
-  return (
+  const content = (
     <>
         <section className='public'>
-            <header className='public__header'>
-                <h1>OrthoObserver</h1>
-                <p>Random quote</p>
-            </header>
+            <Header />
             <main className='public__main'>
-                <h2>Coming soon!</h2>
+                <h2>Welcome!</h2>
             </main>
             <footer className='public__footer'>
                 <h3>God bless</h3>
@@ -17,6 +15,7 @@ const Public = () => {
         </section>
     </>
   )
+  return content
 }
 
 export default Public

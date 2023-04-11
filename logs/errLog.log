@@ -1,0 +1,59 @@
+2023-04-05	14:41:25	ReferenceError: saintName is not defined	POST	/quotes	undefined
+2023-04-05	15:20:16	ReferenceError: oldQUote is not defined	PATCH	/quotes	undefined
+2023-04-05	15:39:49	TypeError: quote.duplicate is not a function	PATCH	/quotes	undefined
+2023-04-05	15:41:29	TypeError: quote.create is not a function	PATCH	/quotes	undefined
+2023-04-05	16:19:55	TypeError: Cannot read properties of null (reading 'saint')	PATCH	/quotes	undefined
+2023-04-05	16:21:08	TypeError: Cannot read properties of null (reading 'saint')	PATCH	/quotes	undefined
+2023-04-05	16:21:45	TypeError: Cannot read properties of null (reading 'saint')	PATCH	/quotes	undefined
+2023-04-05	16:27:23	TypeError: Cannot read properties of null (reading 'saint')	PATCH	/quotes	undefined
+2023-04-05	16:29:29	TypeError: Cannot read properties of null (reading 'saint')	PATCH	/quotes	undefined
+2023-04-05	16:29:50	TypeError: Cannot read properties of null (reading 'saint')	PATCH	/quotes	undefined
+2023-04-05	16:31:07	TypeError: Cannot read properties of null (reading 'saint')	PATCH	/quotes	undefined
+2023-04-05	16:31:57	TypeError: Cannot read properties of null (reading 'saint')	PATCH	/quotes	undefined
+2023-04-05	16:36:48	CastError: Cast to ObjectId failed for value "{ id: '642dc2ed1eab4edcb674738f' }" (type Object) at path "_id" for model "Quote"	PATCH	/quotes	undefined
+2023-04-05	16:44:23	SyntaxError: Expected ',' or '}' after property value in JSON at position 63	PATCH	/quotes	undefined
+2023-04-05	17:41:07	ReferenceError: quote is not defined	DELETE	/saints	undefined
+2023-04-05	17:59:05	TypeError: Saint.findById(...).lean.exec is not a function	POST	/quotes	undefined
+2023-04-05	17:59:45	CastError: Cast to ObjectId failed for value "{ saint: '642dea9739055b73d474d736' }" (type Object) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-05	18:05:42	CastError: Cast to ObjectId failed for value "{ saint: '642dea9739055b73d474d736' }" (type Object) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-05	18:08:14	CastError: Cast to ObjectId failed for value "0" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-05	18:09:18	CastError: Cast to ObjectId failed for value "0" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-05	18:11:55	CastError: Cast to ObjectId failed for value "0" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-05	18:12:23	CastError: Cast to ObjectId failed for value "0" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-06	09:10:45	CastError: Cast to ObjectId failed for value "0" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-06	09:12:10	CastError: Cast to ObjectId failed for value "0" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-06	09:13:09	CastError: Cast to ObjectId failed for value "0" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-06	09:13:35	CastError: Cast to ObjectId failed for value "{ saint: '0' }" (type Object) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-06	09:15:16	CastError: Cast to ObjectId failed for value "0" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-06	09:17:09	ObjectParameterError: Parameter "filter" to find() must be an object, got 0	POST	/quotes	undefined
+2023-04-06	09:17:21	CastError: Cast to ObjectId failed for value "0" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-06	09:22:01	TypeError: Cannot read properties of null (reading '_id')	POST	/quotes	undefined
+2023-04-06	09:22:36	TypeError: Cannot read properties of null (reading '_id')	POST	/quotes	undefined
+2023-04-06	09:22:48	TypeError: Cannot read properties of null (reading '_id')	POST	/quotes	undefined
+2023-04-06	09:24:05	ValidationError: Quote validation failed: saint: Cast to ObjectId failed for value "0" (type string) at path "saint" because of "BSONError"	POST	/quotes	undefined
+2023-04-06	09:26:30	ValidationError: Quote validation failed: saint: Cast to ObjectId failed for value "0" (type string) at path "saint" because of "BSONError"	POST	/quotes	undefined
+2023-04-06	09:29:06	ReferenceError: saintMatch is not defined	POST	/quotes	undefined
+2023-04-06	09:31:39	TypeError: Cannot read properties of null (reading 'name')	POST	/quotes	undefined
+2023-04-06	09:33:46	TypeError: Cannot read properties of null (reading 'name')	POST	/quotes	undefined
+2023-04-06	09:39:09	CastError: Cast to ObjectId failed for value "{ saint: '642dea9739055b73d474d736' }" (type Object) at path "_id" for model "Saint"	POST	/quotes	undefined
+2023-04-07	15:31:22	Error: Cannot find module 'html'
+Require stack:
+- /data/Workspace/OrthoObserver/node_modules/express/lib/view.js
+- /data/Workspace/OrthoObserver/node_modules/express/lib/application.js
+- /data/Workspace/OrthoObserver/node_modules/express/lib/express.js
+- /data/Workspace/OrthoObserver/node_modules/express/index.js
+- /data/Workspace/OrthoObserver/server.js	GET	/	undefined
+2023-04-07	15:32:42	Error: Cannot find module 'html'
+Require stack:
+- /data/Workspace/OrthoObserver/node_modules/express/lib/view.js
+- /data/Workspace/OrthoObserver/node_modules/express/lib/application.js
+- /data/Workspace/OrthoObserver/node_modules/express/lib/express.js
+- /data/Workspace/OrthoObserver/node_modules/express/index.js
+- /data/Workspace/OrthoObserver/server.js	GET	/	undefined
+2023-04-07	15:34:42	Error: Cannot find module 'html'
+Require stack:
+- /data/Workspace/OrthoObserver/node_modules/express/lib/view.js
+- /data/Workspace/OrthoObserver/node_modules/express/lib/application.js
+- /data/Workspace/OrthoObserver/node_modules/express/lib/express.js
+- /data/Workspace/OrthoObserver/node_modules/express/index.js
+- /data/Workspace/OrthoObserver/server.js	GET	/	undefined
