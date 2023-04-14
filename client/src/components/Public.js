@@ -1,14 +1,17 @@
-import React from 'react'
 import Header from './PublicHeader'
+import PublicNav from './PublicNav'
 
 const Public = () => {
   const content = (
     <>
         <section className='public'>
             <Header />
-            <main className='public__main'>
-                <h2>Welcome!</h2>
-            </main>
+            <PublicNav />
+            <div className='public__mainContainer' >
+              <main className='public__main'>
+                  <h2>Home</h2>
+              </main>
+            </div>
             <footer className='public__footer'>
                 <h3>God bless</h3>
             </footer>

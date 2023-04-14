@@ -13,22 +13,15 @@ const Quote = ({ quoteId }) => {
     if (quote) {
         const handleEdit = () => navigate(`/quotes/${quoteId}`)
 
-        // Not using roles may impor other data later -> const quoteRolesString = quote.roles.toString().replaceAll(',', ', ')
-
-        const cellStatus = quote.active ? '' : 'table__cell--inactive'
+        
 
         return (
-            <tr className="table__row quote">
-                <td className={`table__cell ${cellStatus}`}>{quote.name}</td>
-                <td className={`table__cell ${cellStatus}`}>
-                    <button
-                        className="icon-button table__button"
-                        onClick={handleEdit}
-                    >
-                        <FontAwesomeIcon icon={faPenToSquare} />
-                    </button>
-                </td>
-            </tr>
+            <>
+                <div>{quote.text}</div>
+                <button className="icon-button table__button" onClick={handleEdit}>
+                    <FontAwesomeIcon icon={faPenToSquare} />
+                </button>
+            </>
         )
 
     } else return null

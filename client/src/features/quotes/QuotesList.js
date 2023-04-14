@@ -1,4 +1,4 @@
-import { useGetQuoteQuery } from "./quoteApiSlice"
+import { useGetQuotesQuery } from "./quotesApiSlice"
 import Quote from './Quote'
 
 const QuoteList = () => {
@@ -9,7 +9,7 @@ const QuoteList = () => {
         isSuccess,
         isError,
         error
-    } = useGetQuoteQuery()
+    } = useGetQuotesQuery()
 
     let content
 
@@ -28,18 +28,7 @@ const QuoteList = () => {
             : null
 
         content = (
-            <table className="table table--quote">
-                <thead className="table__thead">
-                    <tr>
-                        <th scope="col" className="table__th quote__quotename">Quotename</th>
-                        <th scope="col" className="table__th quote__roles">Roles</th>
-                        <th scope="col" className="table__th quote__edit">Edit</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {tableContent}
-                </tbody>
-            </table>
+            <div>{tableContent}</div>
         )
     }
 

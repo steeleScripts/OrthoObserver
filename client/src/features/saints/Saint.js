@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
 import { useNavigate } from 'react-router-dom'
 
 import { useSelector } from 'react-redux'
@@ -11,24 +9,13 @@ const Saint = ({ saintId }) => {
     const navigate = useNavigate()
 
     if (saint) {
-        const handleEdit = () => navigate(`/saints/${saintId}`)
-
-        // Not using roles may impor other data later -> const saintRolesString = saint.roles.toString().replaceAll(',', ', ')
-
-        const cellStatus = saint.active ? '' : 'table__cell--inactive'
+        const handleEdit = () => navigate(`/dash/saints/${saintId}`)
 
         return (
-            <tr className="table__row saint">
-                <td className={`table__cell ${cellStatus}`}>{saint.name}</td>
-                <td className={`table__cell ${cellStatus}`}>
-                    <button
-                        className="icon-button table__button"
-                        onClick={handleEdit}
-                    >
-                        <FontAwesomeIcon icon={faPenToSquare} />
-                    </button>
-                </td>
-            </tr>
+            <div className='saint__cell'>
+                <h2>{saint.name}</h2>
+                <button className="icon-button table__button" onClick={handleEdit} />
+            </div>
         )
 
     } else return null

@@ -57,3 +57,12 @@ Require stack:
 - /data/Workspace/OrthoObserver/node_modules/express/lib/express.js
 - /data/Workspace/OrthoObserver/node_modules/express/index.js
 - /data/Workspace/OrthoObserver/server.js	GET	/	undefined
+2023-04-13	22:37:31	Error: Not allowed by CORS	GET	/saints	http://localhost:3000
+2023-04-13	22:49:16	Error: Not allowed by CORS	GET	/saints	http://localhost:3000
+2023-04-13	22:49:25	Error: Not allowed by CORS	GET	/saints	http://localhost:3000
+2023-04-13	22:50:52	Error: Not allowed by CORS	GET	/saints	http://localhost:3000
+2023-04-13	22:59:03	Error: Not allowed by CORS	GET	/saints	http://localhost:3000
+2023-04-13	22:59:04	Error: Not allowed by CORS	GET	/saints	http://localhost:3000
+2023-04-13	22:59:09	Error: Not allowed by CORS	GET	/saints	http://localhost:3000
+2023-04-13	23:22:00	Error: Not allowed by CORS	GET	/saints	http://localhost:3000
+2023-04-13	23:23:11	Error: Not allowed by CORS	GET	/saints	http://localhost:3000

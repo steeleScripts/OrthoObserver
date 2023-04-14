@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 const DashHeader = () => {
@@ -9,25 +8,17 @@ const DashHeader = () => {
 
     return (
         <>
-            <div className='public__headerContainer'>
-                <header className='public__header'>
+            <div className='dash__headerContainer'>
+                <header className='dash__header'>
                     <Link to='/dash' style={{ textDecoration: 'none' }}>
-                        <h1 className='public__title'>OrthoObserver</h1>
+                        <h1 className='dash__title'>OrthoObserver</h1>
                     </Link>
-                    <p className='public__quote'><em>"{randomQuote}"</em>
+                    <p className='dash__quote'><em>&quot;{randomQuote}&quot;</em>
                         <br/>
                         <br/>
-                        <div className='public__saintName'>―{saintName}</div>            
+                        <div className='dash__saintName'>―{saintName}</div>            
                     </p>           
-                </header>
-                <nav className='public__nav'>
-                    <ul>
-                        <li>Home</li>
-                        <li>Quotes</li>
-                        <li>Saints</li>
-                        <li>Holy Days</li>
-                    </ul>
-                </nav>
+                </header>                
             </div>
         </>
     )

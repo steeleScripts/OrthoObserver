@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 module.exports = {
     "env": {
         "browser": true,
@@ -11,10 +13,11 @@ module.exports = {
         "react/jsx-uses-react": "off",
         "react/react-in-jsx-scope": "off",
         // enable additional rules
-        "indent": ["error", 4],
+        "indent": ["off", 4],
         "linebreak-style": ["error", "unix"],
-        "quotes": ["error", "double"],
-        "semi": ["error", "always"],
+        "quotes": ["off", "double"],
+        "semi": ["off", "always"],
+        "no-unused-vars": ["off"],
 
         // override configuration set by extending "eslint:recommended"
         "no-empty": "warn",

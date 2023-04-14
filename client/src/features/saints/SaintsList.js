@@ -10,39 +10,28 @@ const SaintsList = () => {
         isError,
         error
     } = useGetSaintsQuery()
-
+    
     let content
 
     if (isLoading) content = <p>Loading...</p>
 
     if (isError) {
-        content = <p className="errmsg">{error?.data?.message}</p>
+        content = <p className="errmsg">{error.data.message}</p>
     }
 
     if (isSuccess) {
 
         const { ids } = saints
 
-        const tableContent = ids?.length
-            ? ids.map(saintId => <Saint key={saintId} saintId={saintId} />)
-            : null
-
-        content = (
-            <table className="table table--saints">
-                <thead className="table__thead">
-                    <tr>
-                        <th scope="col" className="table__th saint__saintname">Saintname</th>
-                        <th scope="col" className="table__th saint__roles">Roles</th>
-                        <th scope="col" className="table__th saint__edit">Edit</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {tableContent}
-                </tbody>
-            </table>
-        )
+        content = ids.map(saint => <Saint key={saint} saintId={saint} />)        
+        
     }
 
-    return content
+    return (
+        <section className="saints-list">
+          <h2>Saints</h2>
+          {content}
+        </section>
+      )
 }
 export default SaintsList
