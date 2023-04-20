@@ -29,6 +29,8 @@ app.use('/', require('./routes/root'))
 app.use('/users', require('./routes/userRoutes'))
 app.use('/quotes', require('./routes/quoteRoutes'))
 app.use('/saints', require('./routes/saintRoutes'))
+app.use('/prayers', require('./routes/prayerRoutes'))
+app.use('/holidays', require('./routes/holidayRoutes'))
 
 app.all('*', (req, res) => {
     res.status(404)

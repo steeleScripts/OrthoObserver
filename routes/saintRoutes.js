@@ -3,7 +3,7 @@ const router = express.Router()
 const saintsController = require('../controllers/saintsController')
 
 router.route('/')
-    .get(saintsController.getAllSaints)
+    .get(saintsController.getAllSaints)    
     .post(saintsController.createNewSaint)
     .patch(saintsController.updateSaint)
     .delete(saintsController.deleteSaint)

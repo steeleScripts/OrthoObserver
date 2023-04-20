@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-body {    
+body {
     width: 100%;
     background-image: url('sky-cross.jpg');
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;    
+    width: 100%;
 }
 
 /* Start of Header Styles*/
@@ -79,7 +79,7 @@ body {
     }
   }
 
-.public__quote {
+.quote_text {
     flex: 4;
     font-size: .75rem;    
     margin: .2rem 0;
@@ -87,7 +87,7 @@ body {
     padding: .2rem 1rem; 
 }
 
-.public__saintName {
+.saint_quote {
     padding: 0;
     margin: 0;
     text-align: right;

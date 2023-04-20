@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+* { 
+    font-family: 'GFS Didot', serif;   
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-image: url('sky-cross.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 4%;
+    background-size: 180%;
+}
+
+@media (max-width: 1200px) {
+    body {
+        background-position: 50% 4%;
+        background-size: 180%;
+    }
+}
+
+.public {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-content: space-around;
+    width: 100%;
+    
+}
+
+.public__header { 
+    display: flex;
+    flex: 3;
+    width: 100%;
+    justify-content: center;
+    background-color: #e9e3b4b9;
+    padding: 1vw 0;
+    font-size: 180%;
+    border-bottom: 1vw solid #381D2A;
+    
+}
+
+.public__title {    
+    color: #381D2A;
+    padding: 0 3rem;
+}
+
+.public__title:hover {
+    color: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 .7rem #fff, 0 0 .8rem #fff, 0 0 .9rem rgb(240, 210, 111), 0 0 1rem rgb(240, 210, 111), 0 0 1.1rem rgb(240, 210, 111), 0 0 1.2rem rgb(240, 210, 111), 0 0 1.3rem rgb(240, 210, 111);
+    }
+    to {
+        text-shadow: 0 0 .7rem #fff, 0 0 .8rem rgb(240, 210, 111), 0 0 .9rem rgb(240, 210, 111), 0 0 1rem rgb(240, 210, 111), 0 0 1.1rem rgb(240, 210, 111), 0 0 1.2rem rgb(240, 210, 111), 0 0 1.3rem rgb(240, 210, 111);
+    }
+}
+
+.public__quote {
+    flex: 4;
+    font-size: calc(.75rem * 10vw);
+    margin: 5vw 10vw; 
+    border-block: .3rem solid;
+    padding: .5rem 1rem; 
+    background-color: #3e6890d8;
+    color: #AABD8C;
+}
+
+.saint_quote {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.public__navContainer {
+    width: 100%;
+    display: flex;
+    flex-grow: 1; 
+    justify-content: space-between; 
+    
+}
+
+.public__nav {
+    width: 100%;
+    padding: 0;     
+    margin: 1rem;
+    margin-top: 0;
+}
+
+.public__nav ul {
+    display: flex;
+    flex-direction: row;    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;    
+    justify-content: space-between;
+}
+
+.public__nav a{
+    color:#381D2A;
+    border-radius: .7rem;
+    border: .3rem;
+    border-style: solid;     
+    background-color: #E9E3B4;
+    flex: 1;
+    text-align: center;
+}
+
+.public__nav li:hover {
+    color: white;
+    border-color:#381D2A; 
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.public__mainContainer {
+    width: 100%;
+    display: flex;
+    flex-grow: 1; 
+    justify-content: space-between; 
+    
+}
+
+.public__main {    
+    display: flex;
+    flex-grow: 1; 
+    justify-content: center;
+    border-top: .3rem solid;
+    padding: 1rem;
+    background-color: #E9E3B4;
+    color: #381D2A;
+}
+
+.public__footer { 
+    flex: 1;
+    height: 10vh;
+}

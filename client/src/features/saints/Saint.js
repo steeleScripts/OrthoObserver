@@ -1,23 +1,32 @@
-import { useNavigate } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import { useFindSaintQuery } from './saintsApiSlice'
 
-import { useSelector } from 'react-redux'
-import { selectSaintById } from './saintsApiSlice'
+const Saint = ({ saintId }) => {    
+    const { 
+        data: saint = [],            
+        isSuccess,
+        isError,
+        error 
+    } = useFindSaintQuery( saintId )
 
-const Saint = ({ saintId }) => {
-    const saint = useSelector(state => selectSaintById(state, saintId))
+    let content
 
-    const navigate = useNavigate()
+    if(isError) {
+        content = error.message
+    }
 
-    if (saint) {
-        const handleEdit = () => navigate(`/dash/saints/${saintId}`)
+    if(isSuccess) {
+        content = saint
+    }
 
-        return (
-            <div className='saint__cell'>
-                <h2>{saint.name}</h2>
-                <button className="icon-button table__button" onClick={handleEdit} />
-            </div>
-        )
-
-    } else return null
+    return ( 
+        <p className="saint_quote">{content}</p>
+    )
+    
 }
+
+Saint.propTypes = {
+    saintId: PropTypes.string.isRequired
+}
+
 export default Saint

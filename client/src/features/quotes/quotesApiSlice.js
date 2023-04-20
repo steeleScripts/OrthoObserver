@@ -32,11 +32,19 @@ export const quotesApiSlice = apiSlice.injectEndpoints({
                 } else return [{ type: 'Quote', id: 'LIST' }]
             }
         }),
+        getRandomQuote: builder.query({
+            query: () => '/quotes/random',
+            validateStatus: (response, result) => {
+                return response.status === 200 && !result.isError
+            },
+            keepUnusedDataFor: 5
+        })
     }),
 })
 
 export const {
     useGetQuotesQuery,
+    useGetRandomQuoteQuery
 } = quotesApiSlice
 
 // returns the query result object

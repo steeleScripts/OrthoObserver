@@ -66,3 +66,41 @@ Require stack:
 2023-04-13	22:59:09	Error: Not allowed by CORS	GET	/saints	http://localhost:3000
 2023-04-13	23:22:00	Error: Not allowed by CORS	GET	/saints	http://localhost:3000
 2023-04-13	23:23:11	Error: Not allowed by CORS	GET	/saints	http://localhost:3000
+2023-04-14	22:15:21	ReferenceError: Prayer is not defined	POST	/prayers	undefined
+2023-04-14	22:16:50	ReferenceError: Holiday is not defined	GET	/holidays	undefined
+2023-04-14	22:34:39	ReferenceError: nameMatch is not defined	POST	/holidays	undefined
+2023-04-14	22:37:20	CastError: Cast to date failed for value "cow" (type string) at path "date" for model "Holiday"	POST	/holidays	undefined
+2023-04-14	22:44:26	CastError: Cast to date failed for value "cow" (type string) at path "date" for model "Holiday"	POST	/holidays	undefined
+2023-04-15	09:11:51	TypeError: mongoose.Collection.countDocuments is not a function	GET	/quotes/random	undefined
+2023-04-18	13:19:08	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle	GET	/saints/find	http://localhost:3000
+2023-04-18	13:21:43	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle	GET	/saints/find	http://localhost:3000
+2023-04-18	13:22:45	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle	GET	/saints/find	http://localhost:3000
+2023-04-18	14:13:17	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle	GET	/saints/find	http://localhost:3000
+2023-04-18	14:15:03	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle	GET	/saints/find	http://localhost:3000
+2023-04-18	14:28:57	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle	GET	/saints/find	http://localhost:3000
+2023-04-18	15:24:05	SyntaxError: Expected property name or '}' in JSON at position 6	GET	/saints/find	undefined
+2023-04-19	16:54:50	SyntaxError: Unexpected token ''', ..."  "name": 'St. Isaac"... is not valid JSON	POST	/saints	undefined

@@ -31,12 +31,13 @@ export const saintsApiSlice = apiSlice.injectEndpoints({
                     ]
                 } else return [{ type: 'Saint', id: 'LIST' }]
             }
-        }),
+        })
     }),
 })
 
 export const {
     useGetSaintsQuery,
+    useFindSaintQuery
 } = saintsApiSlice
 
 // returns the query result object

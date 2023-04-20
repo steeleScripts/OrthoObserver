@@ -42,7 +42,7 @@ const createNewSaint = asyncHandler(async (req, res) => {
     const saint = await Saint.create(saintObject)
 
     if (saint) {
-        res.status(201).json({ message: `NEW SAINT\tName: ${saint.name}`})
+        res.status(201).json({ message: `NEW SAINT ADDED: ${saint.name}`})
     } else {
         res.status(400).json({ message: 'Invalid saint recieved'})
     }
@@ -100,6 +100,12 @@ const deleteSaint = asyncHandler(async (req, res) => {
 
     if(!saint) {
         return res.status(400).json({ message: 'Saint not found' })
+    }
+
+    const hasQuotes = await Quote.findOne({saint: id}).exec()
+
+    if(hasQuotes) {
+        return res.status(400).json({ message: 'Saint has Quotes associated' })
     }
 
     const result = await saint.deleteOne()

@@ -129,9 +129,25 @@ const deleteQuote = asyncHandler(async (req, res) => {
     res.status(200).json({ message: reply })
 })
 
+const getRandomQuote = asyncHandler(async (req, res) => {
+    const quotes = await Quote.find().lean()         // Get all quotes
+    const random = Math.floor(Math.random() * quotes.length) // Get random int between 1 and number of quotes
+    const quote = await Quote.findOne().skip(random) // Get the quote at the position of the random number
+    const saint = await Saint.findById(quote.saint).lean()
+
+    const result = {text: quote.text, name: saint.name}
+
+    if (!quote){
+        return res.status(400).json({ message: 'No Quotes Found' })
+    }
+
+    return res.status(200).json(result)
+})
+
 module.exports = {
     getAllQuotes,
     createNewQuote,
     updateQuote,
-    deleteQuote
+    deleteQuote,
+    getRandomQuote
 }

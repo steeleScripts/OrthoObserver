@@ -6,9 +6,9 @@ const PublicNav = () => {
         <div className='public__navContainer'>
             <nav className='public__nav'>
                 <ul>
-                <Link to='/about' style={{ textDecoration: 'none' }}><li>About</li></Link>
-                <Link to='/holy-days' style={{ textDecoration: 'none' }}><li>Holy Days</li></Link>
-                <Link to='/chat' style={{ textDecoration: 'none' }}><li>Chat</li></Link>
+                <Link to='/calendar' style={{ textDecoration: 'none' }}><li>Liturgical Calendar</li></Link>
+                <Link to='/prayer' style={{ textDecoration: 'none' }}><li>Prayer Requests</li></Link>
+                <Link to='/about' style={{ textDecoration: 'none' }}><li>About</li></Link>                
                 <Link to='/login' style={{ textDecoration: 'none' }}><li>Login</li></Link>
                 </ul>
             </nav>

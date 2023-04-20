@@ -1,11 +1,13 @@
-import Header from './PublicHeader'
+import RandomQuote from '../features/quotes/RandomQuote'
+import PublicHeader from './PublicHeader'
 import PublicNav from './PublicNav'
 
 const Public = () => {
   const content = (
     <>
         <section className='public'>
-            <Header />
+            <PublicHeader />
+            <RandomQuote />      
             <PublicNav />
             <div className='public__mainContainer' >
               <main className='public__main'>
