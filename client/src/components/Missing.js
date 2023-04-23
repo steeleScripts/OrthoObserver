@@ -1,12 +1,14 @@
-import Header from './PublicHeader'
-import PublicNav from './PublicNav'
+import PublicHeader from './Public/PublicHeader'
+import PublicNav from './Public/PublicNav'
+import PublicMain from './Public/PublicMain'
 
 const Missing = () => {
+
+    const title = "Resource not found"
     return (
         <>
-            <Header />
-            <PublicNav />
-            <h1 className='public__main'>Resource not found</h1>
+            <PublicHeader />
+            <div className='public__main'><h1>Resource Not Found</h1></div>
         </>
     )
 }

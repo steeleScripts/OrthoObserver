@@ -1,26 +1,13 @@
 import PropTypes from 'prop-types'
-import { useFindSaintQuery } from './saintsApiSlice'
+import { useSelector } from 'react-redux'
+import { selectSaintById } from './saintsApiSlice'
 
 const Saint = ({ saintId }) => {    
-    const { 
-        data: saint = [],            
-        isSuccess,
-        isError,
-        error 
-    } = useFindSaintQuery( saintId )
+    
 
-    let content
-
-    if(isError) {
-        content = error.message
-    }
-
-    if(isSuccess) {
-        content = saint
-    }
-
+   
     return ( 
-        <p className="saint_quote">{content}</p>
+        <p className="saint_quote">{saintId}</p>
     )
     
 }

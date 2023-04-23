@@ -18,10 +18,10 @@ const getAllPrayers = asyncHandler(async (req, res) => {
 // @route POST /prayers
 // @access Private
 const createNewPrayer = asyncHandler(async (req, res) => {
-    const { text, user } = req.body
+    const { text, username } = req.body
     
     // Confirm data
-    if ( !text || !user ) {
+    if ( !text || !username ) {
         return res.status(400).json({ message: 'All fields are required'})
     }
 
@@ -33,19 +33,19 @@ const createNewPrayer = asyncHandler(async (req, res) => {
     }
 
     // Validate User ID
-    const userMatch = await User.findById( user ).lean().exec()
-    console.log(userMatch)
+    const userMatch = await User.findOne({ username }).lean().exec()
+    
     if (!userMatch) {
-        return res.status(400).json({ message: 'User ID not found make sure User has been added first' })
+        return res.status(400).json({ message: 'Username not found make sure User has been added first' })
     }
 
-    const prayerObject = { text, user }
+    const prayerObject = { text, username }
 
     //Create and store new prayer
     const prayer = await Prayer.create(prayerObject)
 
     if (prayer) {
-        res.status(201).json({ message: `NEW PRAYER\tText: ${prayer.text}\tUser: ${userMatch.name}`})
+        res.status(201).json({ message: `NEW PRAYER\tText: ${prayer.text}\tUser: ${username}`})
     } else {
         res.status(400).json({ message: 'Invalid prayer recieved'})
     }

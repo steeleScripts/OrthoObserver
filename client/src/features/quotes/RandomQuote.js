@@ -11,10 +11,7 @@ const RandomQuote = () => {
     } = useGetRandomQuoteQuery()
 
     let content
-    
-    
-    console.log(data)
-    
+        
     if (isLoading) content = <p>Loading...</p>
 
     if (isError) {
@@ -29,7 +26,7 @@ const RandomQuote = () => {
                     <p><em>&quot;{data.text}&quot;</em></p>
                     <br/>
                     <br/>
-                    <p className='saint_quote'>―{data.name}</p>
+                    <p className='quote-author'>―{data.name}</p>
                 </div>
             </>
         )

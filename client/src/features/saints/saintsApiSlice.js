@@ -36,8 +36,7 @@ export const saintsApiSlice = apiSlice.injectEndpoints({
 })
 
 export const {
-    useGetSaintsQuery,
-    useFindSaintQuery
+    useGetSaintsQuery
 } = saintsApiSlice
 
 // returns the query result object

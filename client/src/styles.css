@@ -4,47 +4,92 @@
     margin: 0; 
     padding: 0; 
     box-sizing: border-box;
+    width: 100%;
+}
+
+html, 
+body,
+.public {
+    height: 100%;
+    width: 100%;
 }
 
 body {
     width: 100%;
+    display: flex;
     background-image: url('sky-cross.jpg');
     background-repeat: no-repeat;
     background-position: 50% 4%;
     background-size: 180%;
 }
 
-@media (max-width: 1200px) {
+
+@media (max-width: 375px) {
     body {
         background-position: 50% 4%;
-        background-size: 180%;
+        background-size: 880%;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        background-position: 50% 4%;
+        background-size: 380%;
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        background-position: 50% 4%;
+        background-size: 400%;
+    }
+}
+
+@media (max-width: 750px) {
+    body {
+        background-position: 50% 16%;
+        background-size: 420%;
+    }
+}
+
+@media (max-width: 950px) {
+    body {
+        background-position: 50% 18%;
+        background-size: 460%;
+    }
+}
+
+@media (min-width: 950px) {
+    body {
+        background-position: 50.45% 18%;
+        background-size: 280%;
     }
 }
 
 .public {
     display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    align-content: space-around;
-    width: 100%;
-    
+    flex-flow: column; 
+    align-self: stretch;
+    width: 100%;    
 }
 
 .public__header { 
-    display: flex;
-    flex: 3;
+    flex: 1 0 auto;
+    position: relative;
     width: 100%;
     justify-content: center;
-    background-color: #e9e3b4b9;
+    background-color: #e9e3b4e0;
     padding: 1vw 0;
     font-size: 180%;
     border-bottom: 1vw solid #381D2A;
+    text-align: center;
     
 }
 
 .public__title {    
     color: #381D2A;
     padding: 0 3rem;
+    text-shadow: .01rem .07rem;
 }
 
 .public__title:hover {
@@ -64,16 +109,18 @@ body {
 }
 
 .public__quote {
-    flex: 4;
+    flex: 0 0 auto;
     font-size: calc(.75rem * 10vw);
-    margin: 5vw 10vw; 
+    align-self: center;
+    width: 74%;
+    margin: 3rem 0;
     border-block: .3rem solid;
     padding: .5rem 1rem; 
     background-color: #3e6890d8;
     color: #AABD8C;
 }
 
-.saint_quote {
+.quote-author {
     padding: 0;
     margin: 0;
     text-align: right;
@@ -85,6 +132,7 @@ body {
     flex-grow: 1; 
     justify-content: space-between; 
     
+    
 }
 
 .public__nav {
@@ -92,54 +140,138 @@ body {
     padding: 0;     
     margin: 1rem;
     margin-top: 0;
+    flex: 1;
 }
 
 .public__nav ul {
+    flex: 1;
     display: flex;
     flex-direction: row;    
     list-style-type: none;
-    margin: 0;
+    align-items: center; 
     padding: 0;    
     justify-content: space-between;
+    
 }
 
-.public__nav a{
+.public__nav a {
+    flex: 1;
     color:#381D2A;
     border-radius: .7rem;
     border: .3rem;
     border-style: solid;     
-    background-color: #E9E3B4;
+    padding: .2rem; 
+    justify-content: center;
+    background-color: #e9e3b4e0;
     flex: 1;
     text-align: center;
+    margin: 0 .06rem;
 }
 
-.public__nav li:hover {
+.public__nav li { 
+    flex: 1;    
+}
+
+.public__nav a:hover {
     color: white;
+    background-color: #e9e3b4;
     border-color:#381D2A; 
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
 }
 
-.public__mainContainer {
-    width: 100%;
+.public__main {
+    flex: 0 1 none;
     display: flex;
-    flex-grow: 1; 
-    justify-content: space-between; 
+    flex-direction: column;
+    justify-content: center;
+    border-top: .3rem solid;
+    padding: .6rem;
+    background-color: #e9e3b4e0;
+    color: #381D2A;
+    font-size: 125%;
+    position: relative;
+}
+
+.public__mainTitle {
+    flex: 0 1 none;
+    width: 100%;
+    border-bottom: solid .3rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: .01rem .06rem;
+}
+
+.public__mainContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1rem;
+    flex: 0 1 none;
     
 }
 
-.public__main {    
+@media (max-width: 500px) {
+    .public__mainContent {
+        flex-direction: column;
+    }
+    .public__prayers {
+        margin: 0;
+    }
+    
+}
+@media (min-width: 500px) {
+    .public__prayers {
+        margin: 0 1rem;
+    }
+
+}
+
+.public__prayers {
     display: flex;
-    flex-grow: 1; 
-    justify-content: center;
-    border-top: .3rem solid;
-    padding: 1rem;
-    background-color: #E9E3B4;
+    flex-direction: column;
+    flex: 0 1 none;
+    background-color: #AABD8C;
+    border: .2rem solid;
     color: #381D2A;
 }
 
+.public__prayersTitle {
+    flex: 0 1 auto;
+    border-bottom: solid;     
+}
+
+.public__prayersContent {
+    flex: 0 2 none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.prayer-box {
+    flex: 0 1 auto;
+    border: .2rem inset;
+    border-color: #381D2A;;
+    color: #381D2A;
+    background-color: #BCCBA4;
+
+}
+
+.public__holiday {
+    background-color: #AABD8C;
+    border: .2rem solid;
+    color: #381D2A;
+}
+
+.public__holidayTitle {
+    border-bottom: solid;
+}
 .public__footer { 
-    flex: 1;
-    height: 10vh;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #AABD8Cb9;
+    border-top: .3rem solid;
+    color: #381D2A;
+    flex-direction: row;
 }

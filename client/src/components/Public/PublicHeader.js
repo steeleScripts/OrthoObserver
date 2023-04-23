@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import RandomQuote from '../../features/quotes/RandomQuote'
+import PublicNav from './PublicNav'
 
 export default function PublicHeader() { 
     
@@ -8,7 +10,9 @@ export default function PublicHeader() {
                 <Link to='/' style={{ textDecoration: 'none' }}>
                     <h1 className='public__title'>OrthoObserver</h1>
                 </Link>    
-            </header>        
+            </header>            
+            <RandomQuote />      
+            <PublicNav />        
         </>
     )
 }

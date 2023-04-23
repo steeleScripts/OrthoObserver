@@ -104,3 +104,5 @@ Require stack:
     --- property 'client' closes the circle	GET	/saints/find	http://localhost:3000
 2023-04-18	15:24:05	SyntaxError: Expected property name or '}' in JSON at position 6	GET	/saints/find	undefined
 2023-04-19	16:54:50	SyntaxError: Unexpected token ''', ..."  "name": 'St. Isaac"... is not valid JSON	POST	/saints	undefined
+2023-04-22	04:56:48	ObjectParameterError: Parameter "filter" to findOne() must be an object, got andrew	POST	/prayers	undefined
+2023-04-22	04:57:34	ObjectParameterError: Parameter "filter" to findOne() must be an object, got andrew	POST	/prayers	undefined
