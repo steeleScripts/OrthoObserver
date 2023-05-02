@@ -1,17 +1,24 @@
-import PublicHeader from './PublicHeader'
-import PublicMain from './PublicMain'
-import PublicFooter from './PublicFooter'
+import RecentPrayers from "../../features/prayers/RecentPrayers"
+import PublicHoliday from "../../features/holidays/PublicHoliday"
+import PublicHeader from "./PublicHeader"
+import PublicFooter from "./PublicFooter"
 
 const Public = () => {
   const content = (
     <>
-        <section className='public'>
-            <PublicHeader />
-            <PublicMain />
-            <PublicFooter /> 
-        </section>
+      <section className='public'>
+        <PublicHeader />
+        <main className='public__main'>
+            <h1 className='public__mainTitle'>Home</h1>
+            <div className='public__mainContent' >
+                <RecentPrayers />
+                <PublicHoliday />
+            </div>
+        </main>
+        <PublicFooter />
+      </section>
     </>
-  )
+)
   return content
 }
 

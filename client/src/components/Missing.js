@@ -1,14 +1,21 @@
 import PublicHeader from './Public/PublicHeader'
 import PublicNav from './Public/PublicNav'
 import PublicMain from './Public/PublicMain'
+import PublicFooter from './Public/PublicFooter'
 
 const Missing = () => {
 
     const title = "Resource not found"
     return (
         <>
-            <PublicHeader />
-            <div className='public__main'><h1>Resource Not Found</h1></div>
+            <section className='public'>
+                <PublicHeader />
+                <div className='public__main'>
+                    <h2 className='public__mainTitle'>Resource Not Found</h2>
+                </div>
+                <PublicFooter />
+            </section>
+            
         </>
     )
 }

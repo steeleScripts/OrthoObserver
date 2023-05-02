@@ -106,3 +106,6 @@ Require stack:
 2023-04-19	16:54:50	SyntaxError: Unexpected token ''', ..."  "name": 'St. Isaac"... is not valid JSON	POST	/saints	undefined
 2023-04-22	04:56:48	ObjectParameterError: Parameter "filter" to findOne() must be an object, got andrew	POST	/prayers	undefined
 2023-04-22	04:57:34	ObjectParameterError: Parameter "filter" to findOne() must be an object, got andrew	POST	/prayers	undefined
+2023-04-25	17:01:12	ReferenceError: Prayers is not defined	GET	/prayers/recent-5	undefined
+2023-04-25	17:01:47	ReferenceError: Prayers is not defined	GET	/prayers/recent-5	undefined
+2023-04-25	17:02:01	TypeError: Invalid sort() argument. Must be a string, object, or array.	GET	/prayers/recent-5	undefined

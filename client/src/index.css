@@ -29,6 +29,14 @@ body {
     width: 100%;
 }
 
+.dash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 /* Start of Header Styles*/
 .public__headerContainer {
     width: 100%;

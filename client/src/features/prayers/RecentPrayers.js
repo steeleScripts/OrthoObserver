@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { useGetPrayersQuery } from './prayersApiSlice'
+import { useGetRecent5PrayersQuery } from './prayersApiSlice'
 
 const RecentPrayers = () => {
     const {
@@ -9,7 +9,7 @@ const RecentPrayers = () => {
         isLoading,
         isError,
         error
-    } = useGetPrayersQuery()
+    } = useGetRecent5PrayersQuery()
 
     let content 
 
@@ -20,26 +20,23 @@ const RecentPrayers = () => {
     if(isError) {
         content = <p className="errmsg">{error?.data?.message}</p>
     }
-    
-    let [counter, setCounter] = useState(5)
-    setCounter = (val) => { 
-        counter = val
-    }
 
     if(isSuccess) {
-        const { ids, entities } = data
-        
+        const { ids } = data
         
         !ids ? content = "No prayers found" : null
-        
-        ids.length < 5 ?
-            counter = setCounter(ids.length) : null
-        
-        let list = ids?.length ? 
-            ids.map(id => <div key={id} className="prayer-box">
-                <p><em>&quot;{entities[id].text}&quot;</em></p>
-                <p className="quote-author">―{entities[id].username}</p></div>) 
-            : null
+
+        const list = data.map(prayer => {
+            let date = new Date(prayer.createdAt)
+
+            return (
+                <div key={prayer.id} className="prayer-box">
+                    <p className="prayer-user">by <strong>{prayer.username}</strong></p>
+                    <p className="prayer-text">&quot;{prayer.text}&quot;</p>
+                    <p className="prayer-time">{date.toDateString()} at {date.toLocaleTimeString()}</p>
+                </div>
+            )
+        })
         
         content = list
     }

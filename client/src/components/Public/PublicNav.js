@@ -6,7 +6,7 @@ const PublicNav = () => {
         <div className='public__navContainer'>
             <nav className='public__nav'>
                 <ul>
-                  <Link to='/calendar' style={{ textDecoration: 'none' }}><li>Calendar</li></Link>
+                  <Link to='/' style={{ textDecoration: 'none' }}><li>Home</li></Link>
                   <Link to='/prayers' style={{ textDecoration: 'none' }}><li>Prayers</li></Link>
                   <Link to='/about' style={{ textDecoration: 'none' }}><li>About</li></Link>                
                   <Link to='/login' style={{ textDecoration: 'none' }}><li>Login</li></Link>

@@ -15,7 +15,6 @@ export const saintsApiSlice = apiSlice.injectEndpoints({
             validateStatus: (response, result) => {
                 return response.status === 200 && !result.isError
             },
-            keepUnusedDataFor: 5,
             transformResponse: responseData => {
                 const loadedSaints = responseData.map(saint => {
                     saint.id = saint._id

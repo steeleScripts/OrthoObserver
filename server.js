@@ -27,6 +27,7 @@ app.use('/', express.static(path.join(__dirname, '/public')))
 
 app.use('/', require('./routes/root'))
 app.use('/users', require('./routes/userRoutes'))
+app.use('/auth', require('./routes/authRoutes'))
 app.use('/quotes', require('./routes/quoteRoutes'))
 app.use('/saints', require('./routes/saintRoutes'))
 app.use('/prayers', require('./routes/prayerRoutes'))

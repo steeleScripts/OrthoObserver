@@ -129,9 +129,20 @@ const deletePrayer = asyncHandler(async (req, res) => {
     res.status(200).json({ message: reply })
 })
 
+const getRecent5 = asyncHandler(async (req, res) => {
+    const prayers = await Prayer.find().limit(5).sort({createdAt: -1}).exec()
+
+    if(!prayers) { 
+        return res.status(400).json({message: 'No prayers found'})
+    }
+
+    res.status(200).json(prayers)
+})
+
 module.exports = {
     getAllPrayers,
     createNewPrayer,
     updatePrayer,
-    deletePrayer
+    deletePrayer,
+    getRecent5
 }

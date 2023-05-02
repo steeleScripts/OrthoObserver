@@ -9,7 +9,8 @@
 
 html, 
 body,
-.public {
+.public,
+.dash {
     height: 100%;
     width: 100%;
 }
@@ -66,7 +67,8 @@ body {
     }
 }
 
-.public {
+.public,
+.dash {
     display: flex;
     flex-flow: column; 
     align-self: stretch;
@@ -74,7 +76,7 @@ body {
 }
 
 .public__header { 
-    flex: 1 0 auto;
+    flex: 0 1 auto;
     position: relative;
     width: 100%;
     justify-content: center;
@@ -113,10 +115,11 @@ body {
     font-size: calc(.75rem * 10vw);
     align-self: center;
     width: 74%;
-    margin: 3rem 0;
+    margin: 3% 0;
+    font-size: 80%;
     border-block: .3rem solid;
     padding: .5rem 1rem; 
-    background-color: #3e6890d8;
+    background-color: #3e6890ea;
     color: #AABD8C;
 }
 
@@ -129,7 +132,7 @@ body {
 .public__navContainer {
     width: 100%;
     display: flex;
-    flex-grow: 1; 
+    flex-grow: 0; 
     justify-content: space-between; 
     
     
@@ -157,7 +160,7 @@ body {
 .public__nav a {
     flex: 1;
     color:#381D2A;
-    border-radius: .7rem;
+    border-radius: 1rem;
     border: .3rem;
     border-style: solid;     
     padding: .2rem; 
@@ -182,16 +185,18 @@ body {
 }
 
 .public__main {
-    flex: 0 1 none;
+    flex: 0 1 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     border-top: .3rem solid;
     padding: .6rem;
     background-color: #e9e3b4e0;
     color: #381D2A;
     font-size: 125%;
     position: relative;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .public__mainTitle {
@@ -208,11 +213,22 @@ body {
     flex-direction: row;
     width: 100%;
     padding: 1rem;
-    flex: 0 1 none;
-    
+    flex: 0 1 auto;
+    height: 100%;
+    overflow-y: auto;
 }
 
-@media (max-width: 500px) {
+.public__aboutContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 3rem;
+    flex: 0 1 auto;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+@media (max-width: 620px) {
     .public__mainContent {
         flex-direction: column;
     }
@@ -231,10 +247,11 @@ body {
 .public__prayers {
     display: flex;
     flex-direction: column;
-    flex: 0 1 none;
+    flex: 1 0 none;
     background-color: #AABD8C;
     border: .2rem solid;
     color: #381D2A;
+    height: 100%;
 }
 
 .public__prayersTitle {
@@ -243,9 +260,10 @@ body {
 }
 
 .public__prayersContent {
-    flex: 0 2 none;
+    flex: 1 0 none;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
+
 }
 
 .prayer-box {
@@ -257,10 +275,25 @@ body {
 
 }
 
+.prayer-text {
+    border-block: .15rem solid;
+    width: 90%;
+    margin-left: 5%;
+    padding: 2% 3%;
+    font-size: 80%;
+}
+
+.prayer-time {
+    font-Size: 65%;
+    text-align: right;
+}
+
 .public__holiday {
     background-color: #AABD8C;
     border: .2rem solid;
     color: #381D2A;
+    flex: 1 0 none;
+    height: 100%;
 }
 
 .public__holidayTitle {
@@ -274,4 +307,43 @@ body {
     border-top: .3rem solid;
     color: #381D2A;
     flex-direction: row;
+    flex: 0 1 auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex: 1 0 auto;
+    align-self: center;
+    align-items: space-around;
+    border: .3rem solid;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+.form__item {
+    margin: 1rem;
+}
+
+.form__input, .form__submit-button {
+    border-radius: 1rem;
+    width: 90%;
+    align-self: center;
+}
+
+.form__submit-button {
+    background-color: #381D2A;
+    color: #e9e3b4;
+    border: .3rem solid;
+    border-color: #e9e3b4;
+    padding: .3rem;
+}
+
+.form__submit-button:hover {
+    background-color: #e9e3b4;
+    border-color:#381D2A;
+    color:#381D2A;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }

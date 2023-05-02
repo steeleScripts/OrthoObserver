@@ -18,6 +18,8 @@ module.exports = {
         "quotes": ["off", "double"],
         "semi": ["off", "always"],
         "no-unused-vars": ["off"],
+        "react/prop-types": 0,
+        "no-extra-boolean-cast": 0,
 
         // override configuration set by extending "eslint:recommended"
         "no-empty": "warn",

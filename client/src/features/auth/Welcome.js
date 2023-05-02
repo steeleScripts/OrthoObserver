@@ -1,20 +1,21 @@
 import { Link } from 'react-router-dom'
+import DashNav from '../../components/Dash/DashNav'
 
 const Welcome = () => {
 
-    const date = new Date()
-    const today = new Intl.DateTimeFormat('en-US', {dateStyle: 'full', timeStyle: 'long' }).format(date)
-
     return (
-        <section className='welcome'>
-            
-            <p>{today}</p>
-            
+        <section className='welcome'>            
             <h1>Welcome!</h1>
+            <Link to="/dash/users">
+                <div className="dash__welcomeOption" >Manage Users</div>
+            </Link>
+            <Link to="/prayers">
+                <div className="dash__welcomeOption" >Manage Prayers</div>
+            </Link>
+            <Link to="/quotes">
+                <div className="dash__welcomeOption" >Manage Quotes</div>
+            </Link>
             
-            <p><Link to='/dash/users'>View Users</Link></p>
-            <p><Link to='/dash/quotes'>View Quotes</Link></p>
-            <p><Link to='/dash/saints'>View Saints</Link></p>
         </section>
     )
 }

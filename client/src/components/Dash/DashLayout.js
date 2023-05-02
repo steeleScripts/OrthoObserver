@@ -1,17 +1,24 @@
-import { Outlet } from 'react-router-dom'
 import DashHeader from './DashHeader'
 import DashFooter from './DashFooter'
 import DashNav from './DashNav'
+import { Outlet } from 'react-router-dom'
+
 
 const DashLayout = () => {
   return (
     <>
+      <section className="dash">
         <DashHeader />
-        <DashNav />
-        <div className='dash-container'>
+        
+        <main className='public__main'>
+          <h1 className='public__mainTitle'>Admin Dashboard</h1>
+          <div className='public__mainContent' >
             <Outlet />
-        </div>
-        <DashFooter />
+          </div>
+        </main> 
+          
+          <DashFooter />
+      </section>
     </>
     
   )

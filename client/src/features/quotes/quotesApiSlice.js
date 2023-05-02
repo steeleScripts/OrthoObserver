@@ -15,7 +15,6 @@ export const quotesApiSlice = apiSlice.injectEndpoints({
             validateStatus: (response, result) => {
                 return response.status === 200 && !result.isError
             },
-            keepUnusedDataFor: 5,
             transformResponse: responseData => {
                 const loadedQuotes = responseData.map(quote => {
                     quote.id = quote._id
