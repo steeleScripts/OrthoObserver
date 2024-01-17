@@ -12,4 +12,10 @@ router.route('/')
 router.route('/recent-5')
     .get(prayersController.getRecent5)
 
+router.route('/public')
+    .get(prayersController.getAllPublicPrayers)
+
+router.route('/ortho')
+    .get(prayersController.getOrthodoxPrayers)
+
 module.exports = router

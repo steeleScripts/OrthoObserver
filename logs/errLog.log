@@ -109,3 +109,59 @@ Require stack:
 2023-04-25	17:01:12	ReferenceError: Prayers is not defined	GET	/prayers/recent-5	undefined
 2023-04-25	17:01:47	ReferenceError: Prayers is not defined	GET	/prayers/recent-5	undefined
 2023-04-25	17:02:01	TypeError: Invalid sort() argument. Must be a string, object, or array.	GET	/prayers/recent-5	undefined
+2023-05-25	21:47:33	CastError: Cast to ObjectId failed for value "1" (type number) at path "_id" for model "User"	DELETE	/users	http://localhost:3000
+2023-05-25	21:47:36	CastError: Cast to ObjectId failed for value "1" (type number) at path "_id" for model "User"	DELETE	/users	http://localhost:3000
+2023-05-29	16:10:36	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-05-29	16:15:37	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-05-29	16:27:08	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-05-29	16:30:47	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-05-29	16:37:17	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-05-29	17:34:12	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-05-29	17:38:29	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-05-29	17:39:37	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-05-29	17:40:59	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-05-29	21:19:08	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-05-29	21:19:36	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-05-30	17:20:49	ObjectParameterError: Parameter "filter" to find() must be an object, got NaN	GET	/prayers/recent-5	http://localhost:3000
+2023-05-30	17:21:09	ObjectParameterError: Parameter "filter" to find() must be an object, got NaN	GET	/prayers/recent-5	http://localhost:3000
+2023-05-31	09:05:34	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2023-05-31	09:05:58	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2023-05-31	09:17:32	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2023-05-31	09:18:52	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2023-05-31	09:28:57	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2023-05-31	09:30:00	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2023-05-31	09:34:33	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-05-31	09:35:07	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2023-06-02	17:19:51	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2023-06-02	17:22:56	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2023-06-02	17:38:07	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2023-06-02	17:41:41	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2023-06-02	17:43:23	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2024-01-03	21:46:22	TypeError: Cannot read properties of null (reading 'saint')	GET	/quotes/random	http://localhost:3000
+2024-01-03	21:48:58	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2024-01-03	22:36:09	CastError: Cast to ObjectId failed for value "St. Nektarios of Aegina" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2024-01-03	22:38:44	CastError: Cast to ObjectId failed for value "St. Nektarios of Aegina" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2024-01-03	22:47:44	CastError: Cast to ObjectId failed for value "St. Nektarios of Aegina" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2024-01-03	22:51:05	CastError: Cast to ObjectId failed for value "St. Nektarios of Aegina" (type string) at path "_id" for model "Saint"	POST	/quotes	undefined
+2024-01-03	23:07:22	TypeError: Cannot read properties of null (reading 'saint')	GET	/quotes/random	http://localhost:3000
+2024-01-03	23:08:17	CastError: Cast to ObjectId failed for value "{ saint: 'St. Nektarios of Aegina' }" (type Object) at path "_id" for model "Saint"	POST	/quotes	undefined
+2024-01-03	23:11:17	ObjectParameterError: Parameter "filter" to findOne() must be an object, got St. Nektarios of Aegina	POST	/quotes	undefined
+2024-01-03	23:12:19	ValidationError: Quote validation failed: saint: Cast to ObjectId failed for value "St. Nektarios of Aegina" (type string) at path "saint" because of "BSONError"	POST	/quotes	undefined
+2024-01-03	23:14:26	ValidationError: Quote validation failed: saint: Cast to ObjectId failed for value "St. Nektarios of Aegina" (type string) at path "saint" because of "BSONError"	POST	/quotes	undefined
+2024-01-03	23:19:32	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2024-01-03	23:22:11	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2024-01-03	23:35:07	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2024-01-04	18:43:36	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2024-01-04	19:00:48	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2024-01-04	19:02:45	ReferenceError: res is not defined	GET	/prayers/ortho	undefined
+2024-01-04	19:14:23	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2024-01-04	19:23:31	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2024-01-04	19:26:25	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2024-01-04	19:39:30	ReferenceError: res is not defined	GET	/prayers/ortho	http://localhost:3000
+2024-01-05	19:10:23	MongooseError: Model.find() no longer accepts a callback	GET	/prayers/ortho	http://localhost:3000
+2024-01-13	14:05:36	ReferenceError: ortho is not defined	GET	/prayers/ortho	http://localhost:3000
+2024-01-15	23:54:32	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2024-01-16	08:57:02	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2024-01-16	09:22:23	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2024-01-16	09:26:24	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000
+2024-01-16	18:54:33	TypeError: res.status is not a function	GET	/moderate/log	http://localhost:3000

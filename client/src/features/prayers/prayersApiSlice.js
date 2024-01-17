@@ -31,6 +31,9 @@ export const prayersApiSlice = apiSlice.injectEndpoints({
                 } else return [{ type: 'Prayer', id: 'LIST' }]
             }
         }),
+        getPublicPrayers: builder.query({
+            query: () => '/prayers/public'
+        }),
         getRecent5Prayers: builder.query({
             query: () => '/prayers/recent-5',
             validateStatus: (response, result) => {
@@ -44,6 +47,28 @@ export const prayersApiSlice = apiSlice.injectEndpoints({
                         ...result.ids.map(id => ({ type: 'Prayer', id }))
                     ]
                 } else return [{ type: 'Prayer', id: 'RECENT5' }]
+            }
+        }),
+        getOrthodoxPrayers: builder.query({
+            query: () => '/prayers/ortho',
+            validateStatus: (response, result) => {
+                return response.status === 200 && !result.isError
+            },
+            transformResponse: responseData => {
+                const loadedOrthoPrayers = responseData.map(prayer => {
+                    prayer.id = prayer._id
+                    return prayer
+                });
+                return prayersAdapter.setAll(initialState, loadedOrthoPrayers)
+            },
+            keepUnusedDataFor: 5,
+            providesTags: (result, error, arg) => {
+                if (result?.ids) {
+                    return [
+                        { type: 'Prayer', id: 'ORTHO' },
+                        ...result.ids.map(id => ({ type: 'Prayer', id }))
+                    ]
+                } else return [{ type: 'Prayer', id: 'ORTHO' }]
             }
         }),
         addNewPrayer: builder.mutation({
@@ -86,6 +111,7 @@ export const prayersApiSlice = apiSlice.injectEndpoints({
 export const {
     useGetPrayersQuery,
     useGetRecent5PrayersQuery,
+    useGetOrthodoxPrayersQuery,
     useAddNewPrayerMutation,
     useUpdatePrayerMutation,
     useDeletePrayerMutation

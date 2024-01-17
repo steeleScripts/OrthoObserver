@@ -59,16 +59,13 @@ const Login = () => {
 
     const content = (        
         <section className="public">
-            <PublicHeader />
-            <header>
-                
-            </header>
             <main  className='public__main'>
                 <p ref={errRef} className={errClass} aria-live="assertive">{errMsg}</p>
                 <h1 className='public__mainTitle'>Login</h1>
-                <form className="form" onSubmit={handleSubmit}>                    
+                <form className="login" onSubmit={handleSubmit}>                    
                     <div className="form__item">
                         <label htmlFor="username"><strong>Username:</strong></label>
+                        <br/>
                         <input
                             className="form__input"
                             type="text"
@@ -82,6 +79,7 @@ const Login = () => {
                     </div>
                     <div className="form__item">
                         <label htmlFor="password"><strong>Password:</strong></label>
+                        <br/>
                         <input
                             className="form__input"
                             type="password"
@@ -97,7 +95,6 @@ const Login = () => {
                     </div>
                 </form>
             </main>
-            <PublicFooter />
         </section>
     )
 

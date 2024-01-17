@@ -18,18 +18,16 @@ const UserCell = ({ userId }) => {
         const cellStatus = user.active ? '' : 'table__cell--inactive'
 
         return (
-            <tr className="table__row user">
-                <td className={`table__cell ${cellStatus}`}>{user.username}</td>
-                <td className={`table__cell ${cellStatus}`}>{userRolesString}</td>
-                <td className={`table__cell ${cellStatus}`}>
-                    <button
-                        className="icon-button table__button"
-                        onClick={handleEdit}
-                    >
-                        <FontAwesomeIcon icon={faPenToSquare} />
-                    </button>
-                </td>
-            </tr>
+            <>
+                <div key={user.id} className="user-box">
+                    <p className="user-username">by <strong>{user.username}</strong></p>
+                    <p className="user-roles">{user.roles}</p>
+                    <div className="user-createdAt">                        
+                        <p className="user-time">Member since: {user.createdAt}</p>
+                        
+                    </div>
+                </div>
+            </>
         )
 
     } else return null

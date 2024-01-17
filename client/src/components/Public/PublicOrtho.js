@@ -1,6 +1,6 @@
-import RecentPrayers from "../../features/prayers/RecentPrayers"
+import OrthodoxPrayers from "../../features/prayers/OrthodoxPrayers"
 
-const PublicPrayers = () => {
+const PublicOrtho = () => {
 
     //Add Clergy Prayer Features
 
@@ -8,9 +8,9 @@ const PublicPrayers = () => {
         <>
             <section className='public'>
                 <main className='public__main'>
-                        <h2 className='public__mainTitle'>Prayer Requests</h2>
+                        <h2 className='public__mainTitle'>Orthodox Prayers</h2>
                         <div className='public__mainContent' >
-                            <RecentPrayers />                            
+                            <OrthodoxPrayers/>                          
                         </div>
                 </main>
             </section>
@@ -18,4 +18,4 @@ const PublicPrayers = () => {
   )
 }
 
-export default PublicPrayers
+export default PublicOrtho

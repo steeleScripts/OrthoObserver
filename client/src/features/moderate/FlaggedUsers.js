@@ -1,7 +1,8 @@
-import { useGetUsersQuery } from "./usersApiSlice"
-import UserCell from './UserCell'
+import React from 'react'
+import { useGetFlaggedUsersQuery } from './moderateApiSlice'
+import UserCell from '../users/UserCell'
 
-const UsersList = () => {
+const FlaggedUsers = () => {
 
     const {
         data: users,
@@ -9,11 +10,7 @@ const UsersList = () => {
         isSuccess,
         isError,
         error
-    } = useGetUsersQuery("usersList", {
-        pollingInterval: 60000,
-        refetchOnFocus: true,
-        refetchOnMountOrArgChange: true
-    })
+    } = useGetFlaggedUsersQuery()
 
     let content
 
@@ -31,9 +28,14 @@ const UsersList = () => {
             ? ids.map(userId => <UserCell key={userId} userId={userId} />)
             : null
 
-        content = tableContent
+        content = (
+            <div>{tableContent}</div>
+        )
     }
 
-    return content
+    return (
+        <div>FlaggedUsers</div>
+    )
 }
-export default UsersList
+
+export default FlaggedUsers

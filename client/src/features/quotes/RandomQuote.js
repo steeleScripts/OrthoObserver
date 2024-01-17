@@ -24,8 +24,6 @@ const RandomQuote = () => {
             <>
                 <div className='public__quote'>
                     <blockquote><em>&quot;{data.text}&quot;</em></blockquote>
-                    <br/>
-                    <br/>
                     <p className='quote-author'>―{data.name}</p>
                 </div>
             </>
