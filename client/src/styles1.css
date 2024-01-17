@@ -67,6 +67,27 @@ body {
     }
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #AABD8C;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #381D2A;
+    border-radius: 2rem;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #492a39;
+  }
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -274,7 +295,6 @@ body {
 
 .public__prayersContent {
     flex: 0 1 auto;
-    overflow-y: scroll;
 
 }
 
